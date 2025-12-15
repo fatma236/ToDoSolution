@@ -1,0 +1,27 @@
+﻿@model RegisterVM
+<h2>Create Account</h2>
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="fname"></label>
+        <input asp-for="fname" class="form-control" />
+        <span asp-validation-for="fname" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="lname"></label>
+        <input asp-for="lname" class="form-control" />
+        <span asp-validation-for="lname" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="PasswordConfirm"></label>
+        <input asp-for="PasswordConfirm" class="form-control" />
+        <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+    </div>
+    <!-- Repeat for LastName, Email, Password, ConfirmPassword -->
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
