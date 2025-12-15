@@ -70,7 +70,12 @@ namespace TasksToGo
             app.UseAuthorization(); // WHAT can you do?
 
 
-            app.MapControllerRoute(/* ... */);
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.Run();
+            //app.MapControllerRoute(/* ... */);
         }
     }
 }

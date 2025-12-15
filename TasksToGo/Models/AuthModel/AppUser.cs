@@ -10,15 +10,15 @@ namespace TasksToGo.Models.AuthModel
         
         [Required]
         [MaxLength(50)]
-        public string fname { get; set; }
+        public string Fname { get; set; }
         [Required]
         [MaxLength(50)]
-        public string lname { get; set; }
-        public string surName { get; set; }
-        public string email { get; set; }
-        public string phoneNumber { get; set; }
-        public string password { get; set; }
-        public string confirmPassword { get; set; }
+        public string Lname { get; set; }
+        public string SurName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Password { get; set; }
+        public string PasswordConfirm { get; set; }
         public virtual ICollection<TodoTask> TodoTasks { get; set; }
     }
 }
